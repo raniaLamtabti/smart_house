@@ -1,0 +1,6 @@
+<main>
+    <h1 class="display">Your rooms of main flore!</h1>
+    <div class="rooms">
+        <app-room *ngFor="let room of rooms" [name]="room.name" [devices]="room.devices"></app-room>
+    </div>
+</main>

@@ -1,0 +1,6 @@
+<main>
+    <h1 class="display">Your flores!</h1>
+    <div class="flores">
+        <app-flore *ngFor="let flore of flores" [name]="flore.name" [rooms]="flore.rooms"></app-flore>
+    </div>
+</main>

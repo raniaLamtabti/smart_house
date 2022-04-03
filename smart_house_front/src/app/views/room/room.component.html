@@ -1,0 +1,6 @@
+<main>
+    <h1 class="display">Your room 1!</h1>
+    <div class="devices">
+        <app-device *ngFor="let device of devices" [type]="device.type" [value]="device.value" [image]="device.image"></app-device>
+    </div>
+</main>

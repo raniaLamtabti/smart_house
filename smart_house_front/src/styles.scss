@@ -3,6 +3,7 @@
 $primary-color: #1890FF;
 $error-color: #FF5778;
 $pass-color: #00BF3B;
+$warning-color: #FFA207;
 $white: #fff;
 $background: #F3F3F3;
 $dark-gray: #B3B7C9;
@@ -23,7 +24,29 @@ body {
     box-sizing: border-box;
 }
 
-.container {
-    width: 100%;
+main {
     padding: 30px 50px;
+    margin-left: 200px;
+    @media only screen and (max-width: 768px) {
+        margin-left: 60px;
+    }
+    .display {
+        font-size: clamp(25px, 40px, 50px);
+        color: $dark-blue;
+    }
+}
+
+@import '~@angular/material/theming';
+@include mat-core();
+$palettes: ( blue: ( base: #1890FF, light: rgb(110, 33, 34)), orange: ( deep: #FFA207));
+$my-app-primary: mat-palette($mat-blue);
+$my-app-accent: mat-palette($mat-blue, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+.alternate-theme {
+    $alternate-primary: mat-palette($mat-light-blue);
+    $alternate-accent: mat-palette($mat-deep-orange, 400);
+    $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+    @include angular-material-theme($alternate-theme);
 }

@@ -1,0 +1,15 @@
+<div class="item">
+    <img [src]="image" alt="" srcset="">
+    <div class="content">
+        <div class="text">
+            <h2>{{type}}</h2>
+            <p>{{value}}</p>
+        </div>
+        <div class="toggle">
+            <input hidden type="checkbox" name="switch" id="switch" />
+            <label for="switch" (click)="toggleSwitch()">
+              <div class="circle" #circle></div>
+            </label>
+        </div>
+    </div>
+</div>

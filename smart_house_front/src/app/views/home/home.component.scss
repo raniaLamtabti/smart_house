@@ -1,1 +1,157 @@
 @import '../../../styles.scss';
+.content {
+    margin: 50px 0;
+    display: flex;
+    gap: 50px;
+    .left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .principalRoom {
+            background-image: linear-gradient(45deg, rgba(24, 144, 255, 1) 0%, rgba(24, 144, 255, 0.4542191876750701) 40%, rgba(24, 144, 255, 0.04805672268907568) 100%), url(../../../assets/living_room.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 20px;
+            border-radius: 20px;
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+            .description {
+                h1 {
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+            .settings {
+                display: flex;
+                justify-content: space-between;
+                .item {
+                    display: flex;
+                    gap: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .houseSettings {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .top {
+                display: flex;
+                gap: 20px;
+            }
+            .wifi {
+                display: flex;
+                justify-content: space-between;
+                background-color: $white;
+                border-radius: 20px;
+                padding: 20px;
+                .itemWifi {
+                    text-align: center;
+                    h2 {
+                        font-size: 18px;
+                    }
+                    p {
+                        color: $primary-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .music {
+                display: flex;
+                gap: 20px;
+                padding: 20px;
+                justify-content: space-between;
+                background-color: $white;
+                border-radius: 20px;
+                .contentMusic {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    h3 {
+                        margin-bottom: 0px;
+                    }
+                    .control {
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+                    .timing {
+                        height: 4px;
+                        width: 100%;
+                        border-radius: 2px;
+                        background-color: $dark-gray;
+                        position: relative;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            height: 4px;
+                            width: 60%;
+                            border-radius: 2px;
+                            background-color: $primary-color;
+                        }
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            height: 12px;
+                            width: 12px;
+                            left: 59%;
+                            border-radius: 6px;
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+            }
+            .toggleS {
+                text-align: center;
+                .toggle {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .right {
+        flex: 1;
+        .today {
+            background-color: $white;
+            border-radius: 20px;
+            padding: 20px;
+            .location {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 30px;
+                img {
+                    width: 35px;
+                }
+                h1 {
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: 0px;
+                }
+            }
+            .date {
+                display: flex;
+                justify-content: space-between;
+                .itemDate {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

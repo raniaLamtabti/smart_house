@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+.room{
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding:40px;
+    min-width: 250px;
+    a{
+        text-decoration: none;
+        h1{
+            font-size: 30px;
+            color: $primary-color;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+        p{
+            color: $dark-blue;
+            font-size: 24px;
+            span{
+                font-weight: 500;
+                color: $error-color;
+            }
+        }
+    }
+}

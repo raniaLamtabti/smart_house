@@ -1,1 +1,91 @@
-<p>home works!</p>
+<main>
+    <h1 class="display">Welcome to your house!</h1>
+    <div class="content">
+        <div class="left">
+            <div class="principalRoom">
+                <div class="description">
+                    <h1>Living Room</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="settings">
+                    <div class="item ac">
+                        <p>AC:</p>
+                        <span><strong>20</strong>°C</span>
+                    </div>
+                    <div class="item lampe">
+                        <p>Lamp:</p>
+                        <span>ON</span>
+                    </div>
+                </div>
+            </div>
+            <div class="houseSettings">
+                <div class="top">
+                    <app-device *ngFor="let device of devices" [type]="device.type" [value]="device.value" [image]="device.image"></app-device>
+                </div>
+                <div class="wifi">
+                    <div class="itemWifi ping">
+                        <h2>Ping<span>ms</span></h2>
+                        <p>11</p>
+                    </div>
+                    <div class="itemWifi download">
+                        <h2>download<span>Mbps</span></h2>
+                        <p>62.46</p>
+                    </div>
+                    <div class="itemWifi upload">
+                        <h2>Upload<span>Mbps</span></h2>
+                        <p>185.73</p>
+                    </div>
+                    <div class="itemWifi toggleS">
+                        <img src="../../../assets/wifi.svg" alt="">
+                        <div class="toggle">
+                            <input hidden type="checkbox" name="switch" id="switch" />
+                            <label for="switch" (click)="toggleSwitch()">
+                            <div class="circle" #circle></div>
+                          </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="music">
+                    <div class="contentMusic">
+                        <h3>lovely (with khalid).Billie Eilish</h3>
+                        <div class="control">
+                            <img src="../../../assets/previous.svg" alt="">
+                            <img src="../../../assets/play.svg" alt="">
+                            <img src="../../../assets/next.svg" alt="">
+                        </div>
+                        <div class="timing">
+
+                        </div>
+                    </div>
+                    <div class="itemMusic toggleS">
+                        <img src="../../../assets/music.svg" alt="">
+                        <div class="toggle">
+                            <input hidden type="checkbox" name="switch" id="switch" />
+                            <label for="switch" (click)="toggleSwitch()">
+                        <div class="circle" #circle></div>
+                      </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="today">
+                <div class="location">
+                    <img src="../../../assets/location.svg" alt="">
+                    <h1>Safi</h1>
+                </div>
+                <div class="date">
+                    <div class="itemDate">
+                        <img src="../../../assets/calendar.svg" alt="">
+                        <p>03/30/2022</p>
+                    </div>
+                    <div class="itemDate">
+                        <img src="../../../assets/clock.svg" alt="">
+                        <p>17:03</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
