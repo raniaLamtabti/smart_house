@@ -1,0 +1,21 @@
+<main>
+  <h1 class="display">Your room 1!</h1>
+  <form class="example-form">
+    <mat-form-field appearance="outline">
+
+      <input matInput placeholder="The device" [(ngModel)]="name" name="name">
+
+    </mat-form-field>
+
+
+    <mat-form-field class="" appearance="outline">
+      <input matInput  placeholder="Value" [(ngModel)]="value" name="value">
+    </mat-form-field>
+
+    <button mat-flat-button (click)="addDevice()">Add</button>
+  </form>
+  <div class="devices">
+    <app-device *ngFor="let device of devices" [type]="device.type" [value]="device.value" [image]="device.image">
+    </app-device>
+  </div>
+</main>

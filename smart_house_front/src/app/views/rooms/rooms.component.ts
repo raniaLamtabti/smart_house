@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit {
   rooms: room = [
-    { name: "room 1", devices: "3"},
-    { name: "room 2", devices: "4"}
+    { name: "room 1", devices: 3},
+    { name: "room 2", devices: 4}
   ];
   constructor() { }
 
@@ -16,4 +16,4 @@ export class RoomsComponent implements OnInit {
   }
 
 }
-type room = Array<{ name: string; devices: string}>
+type room = Array<{ name: string; devices: number}>
